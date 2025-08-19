@@ -3,7 +3,7 @@ export default class FormControl {
     this.num1 = num;
     this.email = email;
     this.lname = lastName;
-    this.getName();
+    // this.getName();
 
     this.numSpan = window.document.getElementById("error-message");
     this.emailSpan = window.document.getElementById("emailMessage");
@@ -40,10 +40,11 @@ export default class FormControl {
     return isValid;
   }
 
-  getName() {
-    localStorage.setItem("lastname", "Maphisa");
-    localStorage.setItem("Name", "Melokuhle" );
-     localStorage.setItem("Phone", "07867");
+  // getName() {
+  //   localStorage.setItem("lastname", "Maphisa");
+
     
-  }
+  // }
+
+
 }

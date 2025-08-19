@@ -1,6 +1,35 @@
 import NumberWork from "./numberWork.js";
 import FormControl from "./formControl.js";
 
+
+const username =localStorage.getItem("username")
+if(username){
+    const spanElement = document.getElementById('username')
+    spanElement.textContent = username
+}else{
+    alert("No username found")
+}
+
+window.setName = () => {
+  const nameInput = document.getElementById("usernameInput").value.trim();
+
+  if (nameInput === "") {
+    alert("Please enter a name first.");
+    return;
+  }
+
+
+  localStorage.setItem("username", nameInput);
+
+  
+
+   alert("Name saved! Welcome, " + nameInput + " ");
+};
+
+
+document.getElementById("forSave").addEventListener("click", window.setName);
+
+
 const num1 = new NumberWork(5);
 
 num1.displayNumber();
@@ -37,4 +66,15 @@ window.start = function (event) {
   } else {
     console.log("One or both inputs are invalid");
   }
+
 }
+window.yes = function () {
+    document.getElementById("form-section").style.display = "block";
+    document.getElementById("bye").style.display = "none";
+};
+
+window.onNo = function () {
+document.getElementById("form-section").style.display = "none";
+document.getElementById("bye").style.display = "inline";
+};
+
