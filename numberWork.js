@@ -14,7 +14,7 @@ export default class NumberWork {
 } else{
     console.log("negative");
 }
-  }t
+  }
 }
 
 
