@@ -22,3 +22,8 @@ main{
     padding: 20PX;
 
 }
+
+#getName, #welcome{
+    display: none;
+
+}

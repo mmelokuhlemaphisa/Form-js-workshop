@@ -1,34 +1,34 @@
 import NumberWork from "./numberWork.js";
 import FormControl from "./formControl.js";
 
+const username = localStorage.getItem("username");
+if (username) {
+// console.log("show form");
+  const spanElement = document.getElementById("username");
+  spanElement.textContent = username;
 
-const username =localStorage.getItem("username")
-if(username){
-    const spanElement = document.getElementById('username')
-    spanElement.textContent = username
-}else{
-    alert("No username found")
+  document.getElementById("welcome").style.display ="block"
+ 
+
+  
+
+} else {
+//   alert("No username found");
+   document.getElementById("getName").style.display = "block";
 }
 
 window.setName = () => {
   const nameInput = document.getElementById("usernameInput").value.trim();
-
   if (nameInput === "") {
     alert("Please enter a name first.");
     return;
   }
-
-
   localStorage.setItem("username", nameInput);
 
-  
-
-   alert("Name saved! Welcome, " + nameInput + " ");
+  alert("Name saved! Welcome, " + nameInput + " ");
 };
 
-
 document.getElementById("forSave").addEventListener("click", window.setName);
-
 
 const num1 = new NumberWork(5);
 
@@ -39,7 +39,6 @@ num1.posOrNeg();
 // const span = document.getElementById("error-message");
 // const email = document.getElementById("emailMessage");
 
-
 // window.start = (event) => {
 //   let formControl = new FormControl(numberInput);
 //   event.preventDefault();
@@ -48,7 +47,7 @@ num1.posOrNeg();
 //   if (formControl.checkIsNotNumber()) {
 //     formControl.submitHandler();
 //   }else{
-   
+
 //      span.hidden = false;
 //   }
 window.start = function (event) {
@@ -66,26 +65,27 @@ window.start = function (event) {
   } else {
     console.log("One or both inputs are invalid");
   }
-
-}
+};
 window.yes = function () {
-    document.getElementById("form-section").style.display = "block";
-    document.getElementById("bye").style.display = "none";
+  document.getElementById("form-section").style.display = "block";
+  document.getElementById("bye").style.display = "none";
 };
 
 window.onNo = function () {
-document.getElementById("form-section").style.display = "none";
-document.getElementById("bye").style.display = "inline";
+  document.getElementById("form-section").style.display = "none";
+  document.getElementById("bye").style.display = "inline";
 };
 
-window.start();
-window.showForm = function () {
-  document.getElementById("Form-Section").style.display = "block"; // show form
-  document.getElementById("noBtn").style.display = "none"; // hide goodbye
-  document.getElementById("HelloSection").style.display = "none"; // hide goodbye
-};
-window.showNo = function () {
-  document.getElementById("noBtn").style.display = "block"; // show goodbye
-  document.getElementById("FormSection").style.display = "none"; // hide form
-  document.getElementById("HelloSection").style.display = "none"; // hide goodbye
-};
+// window.userSave = function (){
+//     document.getElementById("getName").style.display = "none";
+//     document.getElementById("welcome").style.display = "none"
+// };
+
+// window.chooseOption = function () {
+//   document.getElementById("welcome").style.display = "none";
+//   document.getElementById("getName").style.display = "inline";
+// };
+
+// userSave();
+// chooseOption();
+

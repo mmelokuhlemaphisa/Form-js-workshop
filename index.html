@@ -16,6 +16,7 @@
     <header></header>
 
 <main id="root" class="container">
+
 <section id="getName">
   <p>Hello, what is your name:</p>
   <input type="text" id="usernameInput" placeholder="Enter your name" />
@@ -24,13 +25,15 @@
 
 
       
-
-    <p>Hello <span id="username"></span>   <br /> Would you like to fill in my form?</p><br />
+<section id="welcome">
+ <p>Hello <span id="username"></span>   <br /> Would you like to fill in my form?</p><br />
     <button class="btn btn-success" onclick="yes()">Yes</button>
     <button class="btn btn-danger" onclick="onNo()">No</button>
     <br />
     <span id="bye" style="display: none"><h1>Thank you! Bye</h1></span>
 
+</section>
+   
       <section id="form-section" style="display:none">
         <form id="myForm" onsubmit="start(event)" style="display: block">
           <h1 class="text-center">Form JS Workshop</h1>
