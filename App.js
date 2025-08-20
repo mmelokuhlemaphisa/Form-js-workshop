@@ -78,3 +78,14 @@ document.getElementById("form-section").style.display = "none";
 document.getElementById("bye").style.display = "inline";
 };
 
+window.start();
+window.showForm = function () {
+  document.getElementById("Form-Section").style.display = "block"; // show form
+  document.getElementById("noBtn").style.display = "none"; // hide goodbye
+  document.getElementById("HelloSection").style.display = "none"; // hide goodbye
+};
+window.showNo = function () {
+  document.getElementById("noBtn").style.display = "block"; // show goodbye
+  document.getElementById("FormSection").style.display = "none"; // hide form
+  document.getElementById("HelloSection").style.display = "none"; // hide goodbye
+};
